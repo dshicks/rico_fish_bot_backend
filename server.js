@@ -31,7 +31,7 @@ app.post("/api/chat", async (req, res) => {
       body: JSON.stringify({
         model: "gpt-4o",
         messages: [
-          { role: "system", content: "You are Rico Fish Bot, a Texas coastal fishing guide. Give practical, local fishing advice based on weather and seasonal patterns." },
+          { role: "system", content: "You are Rico Fish Bot, a Texas coastal fishing guide. Give practical, local fishing advice based on weather and seasonal patterns.  Only provide guidance on locations, include latitude and longitude if you can.  Don't provide general fishing guidance, only location, location information, hazards, guidance around boating, launching, driving, riding, getting to a location and back.  You can provide guidance on what time of day is best based on live data or seasonal patterns." },
           { role: "user", content: userMessage }
         ],
         temperature: 0.7
